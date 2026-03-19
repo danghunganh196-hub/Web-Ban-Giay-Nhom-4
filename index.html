@@ -21,12 +21,50 @@
                 <h1>Medi Den</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Giày Thể Thao</a></li>
-                <li><a href="#">Giày Thời Trang</a></li>
-                <li><a href="#">Giày Thể Thao</a></li>
-                <li><a href="#">Giày Thời Trang</a></li>
+    <!-- Menu NIKE -->
+    <li class="dropdown">
+        <a href="#">NIKE <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+            <li><a href="#">GIÀY NIKE NAM</a></li>
+            <li><a href="#">GIÀY NIKE NỮ</a></li>
+            <li><a href="#">Jordan</a></li>
+            <li><a href="#">Air Force 1</a></li>
+            <li><a href="#">Air Zoom Pegasus</a></li>
+        </ul>
+    </li>
 
-            </ul>
+    <!-- Menu ADIDAS -->
+    <li class="dropdown">
+        <a href="#">ADIDAS <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+            <li><a href="#">Ultra Boost</a></li>
+            <li><a href="#">Adidas NMD</a></li>
+            <li><a href="#">Stan Smith</a></li>
+            <li><a href="#">Superstar</a></li>
+        </ul>
+    </li>
+
+    <!-- Menu JORDAN -->
+    <li class="dropdown">
+        <a href="#">JORDAN <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+            <li><a href="#">Jordan 1 High</a></li>
+            <li><a href="#">Jordan 1 Low</a></li>
+            <li><a href="#">Jordan 4</a></li>
+        </ul>
+    </li>
+
+    <!-- Menu HÃNG KHÁC -->
+    <li class="dropdown">
+        <a href="#">HÃNG KHÁC <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+            <li><a href="#">PUMA</a></li>
+            <li><a href="#">New Balance</a></li>
+            <li><a href="#">Converse</a></li>
+            <li><a href="#">Vans</a></li>
+        </ul>
+    </li>
+</ul>
             <div class="search-box">
                 <input type="text" placeholder="Tìm kiếm...">
                 <button><i class="fas fa-search"></i></button>
@@ -230,7 +268,52 @@
         </div>
         </section>
     </main>
-    <!-- Cửa sổ chi tiết sản phẩm (Modal) -->
+ <!-- Cửa sổ chi tiết sản phẩm (Modal) -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <!-- Bên trái: Ảnh lớn -->
+            <div class="modal-left">
+                <img id="modalImg" src="" alt="Sản phẩm">
+            </div>
+            
+            <!-- Bên phải: Thông tin chi tiết -->
+            <div class="modal-right">
+                <h2 id="modalName">Tên sản phẩm</h2>
+                <p class="brand-info">Thương hiệu: <span id="modalBrand">Chính hãng</span> | Tình trạng: <span>Còn hàng</span></p>
+                <div class="modal-price-container">
+                    <span id="modalPrice" class="price-main">0đ</span>
+                </div>
+                
+                <p id="modalDesc" class="product-description"></p>
+
+                <div class="size-section">
+                    <h4>Kích thước:</h4>
+                    <div class="size-options">
+                        <button>40.5</button>
+                        <button>42</button>
+                        <button>42.5</button>
+                    </div>
+                </div>
+
+                <div class="quantity-section">
+                    <h4>Số lượng:</h4>
+                    <div class="qty-input">
+                        <button>-</button>
+                        <input type="number" value="1" min="1">
+                        <button>+</button>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-buy-now">MUA NGAY <br><span>Giao hàng thanh toán (COD)</span></button>
+                    <button class="btn-hotline">Hotline <br><span>099999999</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <footer>
         <div class="footer-brands">
             <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg"

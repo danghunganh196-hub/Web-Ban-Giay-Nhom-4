@@ -38,3 +38,28 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
+function openModal(name, price, img, desc) {
+    document.getElementById("modalName").innerText = name;
+    document.getElementById("modalPrice").innerText = price;
+    document.getElementById("modalImg").src = img;
+    document.getElementById("modalDesc").innerText = desc;
+    
+    // Hiển thị modal
+    document.getElementById("productModal").style.display = "block";
+    
+    // Ngăn cuộn trang web khi đang mở modal
+    document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+    document.getElementById("productModal").style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+// Đóng modal khi click ra ngoài vùng trắng
+window.onclick = function(event) {
+    let modal = document.getElementById("productModal");
+    if (event.target == modal) {
+        closeModal();
+    }
+}
